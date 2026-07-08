@@ -1,0 +1,95 @@
+{
+  "crops": [
+    {
+      "id": "maize",
+      "name": "Maize",
+      "scientificName": "Zea mays",
+      "image": "https://storage.googleapis.com/dala-prod-public-storage/generated-images/819a9095-32e1-4899-8ddc-1de6e5ce66ee/maize-field-4559ac7b-1782316642588.webp",
+      "plantingSeason": "Rainy season (March-May or Oct-Dec)",
+      "spacing": "75cm x 25cm",
+      "maturity": "90-120 days",
+      "commonIssues": ["maize_streak", "fall_armyworm", "nutrient_deficiency"],
+      "tips": [
+        "Use high-quality hybrid seeds for better yields.",
+        "Ensure field is well-weeded during the first 6 weeks.",
+        "Apply organic mulch to retain moisture."
+      ]
+    },
+    {
+      "id": "beans",
+      "name": "Common Beans",
+      "scientificName": "Phaseolus vulgaris",
+      "image": "https://storage.googleapis.com/dala-prod-public-storage/generated-images/819a9095-32e1-4899-8ddc-1de6e5ce66ee/beans-crop-ed121a92-1782316643762.webp",
+      "plantingSeason": "Onset of rains",
+      "spacing": "45cm x 15cm",
+      "maturity": "60-90 days",
+      "commonIssues": ["bean_rust", "aphids", "root_rot"],
+      "tips": [
+        "Rotate with maize or sorghum to break pest cycles.",
+        "Do not weed when leaves are wet to prevent disease spread.",
+        "Harvest when pods are dry and brittle."
+      ]
+    },
+    {
+      "id": "cassava",
+      "name": "Cassava",
+      "scientificName": "Manihot esculenta",
+      "image": "https://storage.googleapis.com/dala-prod-public-storage/generated-images/819a9095-32e1-4899-8ddc-1de6e5ce66ee/cassava-crop-66c0df3b-1782316643358.webp",
+      "plantingSeason": "Start of heavy rains",
+      "spacing": "1m x 1m",
+      "maturity": "9-12 months",
+      "commonIssues": ["mosaic_virus", "mealybugs", "bacterial_blight"],
+      "tips": [
+        "Use disease-resistant cuttings.",
+        "Plant on mounds or ridges to prevent waterlogging.",
+        "Remove and burn plants showing leaf mosaic symptoms immediately."
+      ]
+    }
+  ],
+  "diseases": [
+    {
+      "id": "maize_streak",
+      "name": "Maize Streak Virus",
+      "symptoms": ["yellow_stripes", "stunted_growth", "white_spots"],
+      "diagnosis": "Yellow or white stripes running parallel to leaf veins.",
+      "treatment": "Plant resistant varieties; control leafhoppers early; remove infected plants.",
+      "prevention": "Early planting with the first rains."
+    },
+    {
+      "id": "fall_armyworm",
+      "name": "Fall Armyworm",
+      "symptoms": ["ragged_leaves", "larvae_presence", "holes_in_stalk"],
+      "diagnosis": "Circular to irregular holes in leaves; presence of green/brown caterpillars with an inverted Y on head.",
+      "treatment": "Handpick larvae for small plots; use Neem extract or recommended pesticides; apply sand/ash in the whorl.",
+      "prevention": "Intercropping maize with beans or desmodium."
+    },
+    {
+      "id": "mosaic_virus",
+      "name": "Cassava Mosaic Disease",
+      "symptoms": ["twisted_leaves", "mottled_leaves", "stunted_growth"],
+      "diagnosis": "Leaves are small, twisted, and have yellow-green patches.",
+      "treatment": "There is no cure once infected; uproot and burn infected plants.",
+      "prevention": "Use clean, certified disease-free cuttings."
+    },
+    {
+      "id": "nutrient_deficiency",
+      "name": "Nutrient Deficiency (Nitrogen/Phosphorus)",
+      "symptoms": ["yellow_leaves", "purple_leaves", "slow_growth"],
+      "diagnosis": "Yellowing starting from leaf tips (Nitrogen) or purplish tints on leaves (Phosphorus).",
+      "treatment": "Apply compost, well-rotted manure, or balanced fertilizers.",
+      "prevention": "Soil testing and regular addition of organic matter."
+    }
+  ],
+  "symptoms": [
+    { "id": "yellow_stripes", "label": "Yellow stripes on leaves" },
+    { "id": "yellow_leaves", "label": "Yellowing leaves" },
+    { "id": "purple_leaves", "label": "Purple or red leaf tints" },
+    { "id": "stunted_growth", "label": "Slow or stunted growth" },
+    { "id": "ragged_leaves", "label": "Torn or eaten leaves" },
+    { "id": "twisted_leaves", "label": "Twisted or distorted leaves" },
+    { "id": "mottled_leaves", "label": "Yellow/Green patches on leaves" },
+    { "id": "larvae_presence", "label": "Caterpillars or worms present" },
+    { "id": "white_spots", "label": "Small white spots on leaves" },
+    { "id": "holes_in_stalk", "label": "Holes in the plant stalk" }
+  ]
+}
