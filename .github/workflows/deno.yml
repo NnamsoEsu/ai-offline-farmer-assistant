@@ -1,4 +1,5 @@
-# This workflow uses actions that are not certified by GitHub.
+
+        # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
 # documentation.
@@ -15,7 +16,8 @@ on:
     branches: ["main"]
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
 
 jobs:
   test:
@@ -31,11 +33,28 @@ jobs:
         with:
           deno-version: v1.x
 
+      # Auto-fix linting issues
+      - name: Auto-fix linter issues
+        run: deno lint --fix
+
+      # Commit and push fixes if any changes were made
+      - name: Commit and push fixes
+        run: |
+          if git diff --quiet; then
+            echo "No linting issues to fix"
+          else
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add -A
+            git commit -m "chore: auto-fix deno lint issues"
+            git push
+          fi
+
       # Uncomment this step to verify the use of 'deno fmt' on each commit.
       # - name: Verify formatting
       #   run: deno fmt --check
 
-      - name: Run linter
+      - name: Run linter (verify)
         run: deno lint
 
       - name: Run tests
